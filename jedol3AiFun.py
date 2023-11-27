@@ -196,7 +196,7 @@ def vectorDB_create(vectorDB_folder):
 
 def ai_response( vectorDB_folder="", query="", token="", ai_mode="" ):
 
-    openai.api_key = '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'
+    openai.api_key = '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'
     client = OpenAI()
     chat_history=chatDB.query_history(token,ai_mode) # 기존 대화 내용
     # print("chat_history=",chat_history)
@@ -277,29 +277,7 @@ def ai_response( vectorDB_folder="", query="", token="", ai_mode="" ):
                                     알고있는 알레르기 정보는 {data7}뿐이다.
                                     알고있는 알레르기정보는 {data7}뿐이다.
                                     알고있는 알레르기는 {data7}뿐이다.
-                                    """})
-
-            for i in range (10):
-                prompt.append({"role": "user", "content": "오늘 뭐 먹지?" } )    
-                prompt.append({"role": "assistant", "content": "선호하는 음식을 말해주세요! (한식, 일식, 중식, 양식, 동남아, 패스트푸드)" } )   
-
-                prompt.append({"role": "user", "content": "한식" } )    
-                prompt.append({"role": "assistant", "content": "보유하고 있는 알레르기 정보를 입력해주세요! (갑각류,견과류,달걀,땅콩,밀,생선,우유,조개,콩,호두,잣,복숭아,메밀,고등어,돼지,소,오징어,굴,전복,홍합,닭,토마토)" } )   
-
-                prompt.append({"role": "user", "content": "일식" } )    
-                prompt.append({"role": "assistant", "content": "보유하고 있는 알레르기 정보를 입력해주세요! (갑각류,견과류,달걀,땅콩,밀,생선,우유,조개,콩,호두,잣,복숭아,메밀,고등어,돼지,소,오징어,굴,전복,홍합,닭,토마토)" } )   
-                
-                prompt.append({"role": "user", "content": "중식" } )    
-                prompt.append({"role": "assistant", "content": "보유하고 있는 알레르기 정보를 입력해주세요! (갑각류,견과류,달걀,땅콩,밀,생선,우유,조개,콩,호두,잣,복숭아,메밀,고등어,돼지,소,오징어,굴,전복,홍합,닭,토마토)" } )   
-                
-                prompt.append({"role": "user", "content": "양식" } )    
-                prompt.append({"role": "assistant", "content": "보유하고 있는 알레르기 정보를 입력해주세요! (갑각류,견과류,달걀,땅콩,밀,생선,우유,조개,콩,호두,잣,복숭아,메밀,고등어,돼지,소,오징어,굴,전복,홍합,닭,토마토)" } )   
-                
-                prompt.append({"role": "user", "content": "동남아" } )    
-                prompt.append({"role": "assistant", "content": "보유하고 있는 알레르기 정보를 입력해주세요! (갑각류,견과류,달걀,땅콩,밀,생선,우유,조개,콩,호두,잣,복숭아,메밀,고등어,돼지,소,오징어,굴,전복,홍합,닭,토마토)" } )   
-                
-                prompt.append({"role": "user", "content": "패스트푸드" } )    
-                prompt.append({"role": "assistant", "content": "보유하고 있는 알레르기 정보를 입력해주세요! (갑각류,견과류,달걀,땅콩,밀,생선,우유,조개,콩,호두,잣,복숭아,메밀,고등어,돼지,소,오징어,굴,전복,홍합,닭,토마토)" } )   
+                                    """})   
                 
             for i in range(10):
                 prompt.append({"role": "user", "content": "도움말" } )    
