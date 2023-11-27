@@ -44,15 +44,6 @@ def login():
 
         if user and check_password_hash(user.password, password):
             login_user(user)
-            # 사용자 이름을 다른 서버에 보내는 코드 부분입니다.
-            url = "http://10.191.144.201:5001/receive-username"  
-            data = {"username": username}
-            response = requests.post(url, data=data)
-            if response.status_code == 200:
-                print("Username successfully sent to other server.")
-            else:
-                print("Failed to send username to other server.")
-            
             return redirect(url_for('home'))
         else:
             return redirect(url_for('login'))

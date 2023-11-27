@@ -1,2 +1,4 @@
 .env
 .web.config
+cert.pem
+key.pem
