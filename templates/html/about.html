@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    {% include 'html/head.html' %}
+
+</head>
+
+<body>
+  
+  <div class="container mt-2">
+    <section id="menu" class="rounded-1">
+         {% include '/html/menu.html' %}
+    </section> 
+    
+    <section id="main-page2" class="container my-5">
+      <div class="row">
+        <div class="col-lg-4 mb-3">
+          <div class="card" style="width: 100%;"> <!-- width: 100% ensures it fills the parent column -->
+            <img src="/images/foodpicture1.jpg" class="card-img-top" style="height:18rem">
+            <div class="card-body">
+              <p class="card-text py-3">
+                인공지능 기초과목의 수행평가로 제작되고 있는 음식 추천 챗봇 '오늘 뭐 먹지?' 입니다.<br>
+                오늘 뭐 먹지? 는 한식, 일식, 중식, 양식 등 다양한 음식에 대한 정보가 학습되어 있으며, 사용자의 기호와 알레르기에 맞는 최적의 음식을 추천해줍니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3">
+          <div class="card" style="width: 100%;">
+            <img src="/images/aipicture.jpg" class="card-img-top" style="height:18rem">
+            <div class="card-body">
+              <p class="card-text py-3">
+                오늘 뭐 먹지? 는 존재하는 음식 데이터를 바탕으로 학습되었으며, flask, openai등의 라이브러리를 통해 제작되었습니다. <br>
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3">
+          <div class="card" style="width: 100%;">
+            <img src="/images/make.jpg" class="card-img-top" style="height:18rem">
+            <div class="card-body ">
+              <p class="card-text py-3">
+                제작자는 고창환, 이권이며, 챗봇의 바탕이 되는 제돌이는 조동수 선생님께서 제작하였습니다.<br>
+                
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include 'html/bottom.html' %}
+ </div>
+
+
+    
+</body>
+<script src="/js/function.js"></script>
+<script src="/js/theme-color.js"></script>
+</html>
