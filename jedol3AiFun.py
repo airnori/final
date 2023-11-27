@@ -196,7 +196,7 @@ def vectorDB_create(vectorDB_folder):
 
 def ai_response( vectorDB_folder="", query="", token="", ai_mode="" ):
 
-    openai.api_key = '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'
+    openai.api_key = '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'
     client = OpenAI()
     chat_history=chatDB.query_history(token,ai_mode) # 기존 대화 내용
     # print("chat_history=",chat_history)
